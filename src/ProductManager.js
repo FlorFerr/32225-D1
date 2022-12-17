@@ -32,7 +32,7 @@ class ProductManager{
             this.products = await fs.promises.readFile(this.path, 'utf-8')
             return JSON.parse(this.products)
         }catch(err){
-            console.log(this.products)
+            console.log(err)
         }
     }
 
@@ -41,10 +41,9 @@ class ProductManager{
             let products = await this.getProducts()
             let productFound = products.find(product => product.id === id)
             if(productFound){
-                console.log(productFound)
                 return productFound
             }else{
-                console.log({error: 'Product not found'})
+                return{error: 'Product not found'}
             }
         }catch(err){
             throw new Error(`Error al obtener la información: ${err}`)
@@ -54,12 +53,10 @@ class ProductManager{
     updateProduct = async(id, product) => {
         try{
             let products = await this.getProducts()
-            console.log(products)
             const objIndex = products.findIndex(item => item.id === id)
             if(objIndex >= 0){
                 products[objIndex] =  { ...product, id }
                 await fs.promises.writeFile(this.path, JSON.stringify( products, null, 2, 'utf-8'))
-                console.log(this.products)
                 return product
             }else{
                 return {error: "Producto no encontrado"}            
@@ -76,7 +73,7 @@ class ProductManager{
             if(product){
             const deleteProduct = products.filter(p => p.id != id)
             await fs.promises.writeFile(this.path, JSON.stringify(deleteProduct, null, 2), 'utf-8')
-            console.log("Producto eliminado")
+             return "Producto eliminado"
             }
         }catch(err){
             throw new Error(`Error al eliminar la información: ${err}`)
@@ -84,9 +81,13 @@ class ProductManager{
     }
 }
 
-const newProduct = new ProductManager('./products.txt')
+module.exports = ProductManager;
+
+
+/*Test*/
+//const newProduct = new ProductManager('./products.json')
 //newProduct.addProduct({title: 'producto prueba', description: 'Este es un producto prueba', price: 200, thumbnail:'sin imagen', code: 'abc1234',stock: 25})
-newProduct.getProducts()
+//newProduct.getProducts()
 //newProduct.updateProduct(1, {title: 'producto prueba', description: 'Este es un producto prueba', price: 200, thumbnail:'sin imagen', code: 'abc123',stock: 25})
 //newProduct.getProductById(2)
 //newProduct.deleteProduct(2)

@@ -1,0 +1,92 @@
+[
+  {
+    "title": "salmon",
+    "description": "Este es un salmon",
+    "price": 200,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/seafood-products/512/salmon-512.png",
+    "code": "512",
+    "stock": 25,
+    "id": 1
+  },
+  {
+    "title": "manzana",
+    "description": "Este es una manzana",
+    "price": 5,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/fruit-collection/512/apple-256.png",
+    "code": "256",
+    "stock": 10,
+    "id": 2
+  },
+  {
+    "title": "pan",
+    "description": "Este es un pan",
+    "price": 200,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/basic-ingredients/512/bread-256.png",
+    "code": "123",
+    "stock": 13,
+    "id": 3
+  },
+  {
+    "title": "té",
+    "description": "Este es un té",
+    "price": 3,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/basic-ingredients/512/tea-256.png",
+    "code": "231",
+    "stock": 300,
+    "id": 4
+  },
+  {
+    "title": "sandía",
+    "description": "Este es una sandía",
+    "price": 15,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/fruit-collection/512/watermelon-512.png",
+    "code": "257",
+    "stock": 17,
+    "id": 5
+  },
+  {
+    "title": "cheddar",
+    "description": "Este es un queso",
+    "price": 150,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/dairy-products-4/512/cheddar-256.png",
+    "code": "403",
+    "stock": 9,
+    "id": 6
+  },
+  {
+    "title": "zanhoria",
+    "description": "Este es una zanahoria",
+    "price": 6,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/vegetable-collection/512/carrot-256.png",
+    "code": "248",
+    "stock": 13,
+    "id": 7
+  },
+  {
+    "title": "leche",
+    "description": "Este es una leche",
+    "price": 100,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/dairy-products-4/512/milk-256.png",
+    "code": "578",
+    "stock": 4,
+    "id": 8
+  },
+  {
+    "title": "sal",
+    "description": "Este es una sal",
+    "price": 30,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/basic-ingredients/512/salt-256.png",
+    "code": "309",
+    "stock": 27,
+    "id": 9
+  },
+  {
+    "title": "pollo",
+    "description": "Este es un pollo",
+    "price": 130,
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/meat-products-2/512/chicken-256.png",
+    "code": "780",
+    "stock": 10,
+    "id": 10
+  }
+]

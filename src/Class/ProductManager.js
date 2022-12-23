@@ -57,7 +57,7 @@ class ProductManager{
             if(objIndex >= 0){
                 products[objIndex] =  { ...product, id }
                 await fs.promises.writeFile(this.path, JSON.stringify( products, null, 2, 'utf-8'))
-                return product
+                return `Producto id: ${id} actualizado`
             }else{
                 return {error: "Producto no encontrado"}            
             }
@@ -73,7 +73,7 @@ class ProductManager{
             if(product){
             const deleteProduct = products.filter(p => p.id != id)
             await fs.promises.writeFile(this.path, JSON.stringify(deleteProduct, null, 2), 'utf-8')
-             return "Producto eliminado"
+            return "Producto eliminado"
             }
         }catch(err){
             throw new Error(`Error al eliminar la información: ${err}`)

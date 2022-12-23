@@ -60,8 +60,6 @@ class CartManager{
                 if(productFound){
                     const duplicateProduct = carts[objIndex].products.findIndex(e => e.id === productId)
                     if(duplicateProduct != -1){
-                        console.log(duplicateProduct)
-
                         carts[objIndex].products[duplicateProduct] = {id: productId, quantity: carts[objIndex].products[duplicateProduct].quantity +  1}
                         await fs.promises.writeFile(this.path, JSON.stringify( carts, null, 2, 'utf-8'))
                     }else{

@@ -16,7 +16,7 @@ productsRoute.get('/', async (req, res) =>{
             res.send(await products.getProducts())
         }
     }catch(error){
-        console.log(error)
+        throw new Error(error)
     }
 })
 
@@ -25,7 +25,7 @@ productsRoute.get('/:pid', async (req, res) =>{
         const { pid } = req.params
         res.send(await products.getProductById(Number(pid)))
     }catch(error){
-        console.log(error)
+        throw new Error(error)
     }
 })
 
@@ -34,7 +34,7 @@ productsRoute.post('/', async (req, res) => {
         const productRequest = req.body
         res.send(await products.addProduct(productRequest))
     }catch(error){
-        console.log(error)
+        throw new Error(error)
     }
 })
 
@@ -44,7 +44,7 @@ productsRoute.put('/:pid', async (req, res)=> {
         const productRequest = req.body
         res.send(await products.updateProduct(Number(pid), productRequest))
     }catch(error){
-        console.log(error)
+        throw new Error(error)
     }
 })
 
@@ -54,7 +54,7 @@ productsRoute.delete('/:pid', async (req, res)=>{
         res.send(await products.deleteProduct(Number(pid)))
         
     } catch (error) {
-        console.log(error)
+        throw new Error(error)
     }
 })
 

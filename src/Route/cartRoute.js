@@ -12,7 +12,7 @@ cartRoute.get('/:cid', (req, res) => {
         res.send(response)
     })
     .catch(err => {
-        console.log(err)
+        throw new Error(err)
     })
 })
 
@@ -20,7 +20,7 @@ cartRoute.post('/', async (req, res) => {
     try{
         res.send( await cart.saveCart())
     }catch(error){
-        console.log(error)
+        throw new Error(error)
     }
 })
 
@@ -29,7 +29,7 @@ cartRoute.post('/:cid/products/:pid', async (req, res) => {
         const { cid, pid } = req.params
         res.send( await cart.saveCartItem(Number(cid), pid))
     } catch (error) {
-        console.log(error)
+        throw new Error(error)
     }
 })
 

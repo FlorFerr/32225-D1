@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    padding: 1rem;
+    border-radius: 5px;
+}
+.container{
+    margin-top: 2rem;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
+
+.form__control{
+    display: flex;
+}
+.btn{
+    align-self: center;
+}
+
+.img{
+    width: 50px;
+    height: auto;
+}
+
+
+
+.form-group{
+    margin: 1rem;
+}
+
+.product__title{
+    text-transform: capitalize;
+}
+td{
+    vertical-align: middle;
+}
